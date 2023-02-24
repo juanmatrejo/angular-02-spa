@@ -1,0 +1,14 @@
+<h1>Heroes <small>Marvel y DC</small></h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-12">
+        <div class="alert alert-success" role="alert">
+            You have selected {{nameSelected}}
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <div class="col" *ngFor="let heroe of heroes; let idx = index">
+        <app-hero-card [hero]="heroe" [parent]="'all'" [keyWord]="''" (lastNameEvent)="displayName($event);"></app-hero-card>
+    </div>
+</div>
